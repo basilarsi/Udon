@@ -106,4 +106,9 @@ static_assert(sizeof(uint64) == 8, "The size of a uint64 must be exactly 8 bytes
 static_assert(sizeof(float32) == 4, "The size of a float32 must be exactly 4 bytes!");
 static_assert(sizeof(float64) == 8, "The size of a float64 must be exactly 8 bytes!");
 
+/* MSVC doesn't include std::exception */
+#if _MSC_VER
+  #include <stdexcept>
+#endif
+
 #endif //UDON_DEFS_HPP
