@@ -6,8 +6,12 @@
 
 #include <Udon/SDL.hpp>
 
+#include <Udon/Core/Logger.hpp>
+
 int32 main() {
   try {
+    udon::Logger::Initialize("Dummy App");
+
     SDL::Context _context;
 
     SDL::Window _window;
