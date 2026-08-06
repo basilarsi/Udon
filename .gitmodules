@@ -1,0 +1,6 @@
+[submodule "Udon/vendor/sdl"]
+	path = Udon/vendor/sdl
+	url = https://github.com/libsdl-org/SDL
+[submodule "Udon/vendor/spdlog"]
+	path = Udon/vendor/spdlog
+	url = https://github.com/gabime/spdlog
