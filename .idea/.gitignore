@@ -8,3 +8,9 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+/discord.xml
+/editor.xml
+/misc.xml
+/modules.xml
+/Udon.iml
+/vcs.xml
