@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_COMPILE_WARNING_AS_ERROR ON)
 
 add_subdirectory(Udon)
-#add_subdirectory(DummyApp)
+add_subdirectory(DummyApp)

@@ -7,7 +7,7 @@ add_library(Udon SHARED src/Pch.cpp
     src/Math/Point4D.cpp
     src/Math/Point3D.cpp
     src/Math/Point2D.cpp
-    include/Udon/SDL.hpp)
+    src/SDL.cpp)
 
 add_subdirectory(vendor/sdl)
 add_subdirectory(vendor/spdlog)
@@ -21,5 +21,5 @@ target_compile_definitions(Udon PUBLIC UDON_BUILD)
 find_package(Vulkan REQUIRED)
 
 target_link_libraries(Udon PUBLIC Vulkan::Vulkan)
-target_link_libraries(Udon PRIVATE SDL3::SDL3)
-target_link_libraries(Udon PRIVATE spdlog::spdlog)
+target_link_libraries(Udon PUBLIC SDL3::SDL3)
+target_link_libraries(Udon PUBLIC spdlog::spdlog)
