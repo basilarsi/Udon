@@ -68,7 +68,7 @@ namespace SDL {
     if (_handle) {
       SDL_DestroyWindow(_handle);
       _handle = nullptr;
-      UDON_VERBOSE("Destroyed an SDL window.");
+      UDON_VERBOSE("Automatically destroyed an SDL window.");
     }
   }
 
@@ -92,5 +92,13 @@ namespace SDL {
 
   Window::operator SDL_Window*() const {
     return _handle;
+  }
+
+  void Window::Destroy() {
+    if (_handle != nullptr) {
+      SDL_DestroyWindow(_handle);
+      _handle = nullptr;
+      UDON_VERBOSE("Manually destroyed an SDL window.");
+    }
   }
 }

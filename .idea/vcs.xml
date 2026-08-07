@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Udon/vendor/sdl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Udon/vendor/spdlog" vcs="Git" />
   </component>
 </project>

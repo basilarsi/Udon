@@ -22,22 +22,22 @@ namespace udon {
   };
 }
 
-#define VK_VERBOSE(...) ::udon::Logger::_vkLogger->trace(__VA_ARGS__)
-#define VK_INFO(...)    ::udon::Logger::_vkLogger->info(__VA_ARGS__)
-#define VK_WARN(...)    ::udon::Logger::_vkLogger->warn(__VA_ARGS__)
-#define VK_ERROR(...)   ::udon::Logger::_vkLogger->error(__VA_ARGS__)
-#define VK_FATAL(...)   ::udon::Logger::_vkLogger->critical(__VA_ARGS__)
+#define VK_VERBOSE(...) udon::Logger::_vkLogger->trace(__VA_ARGS__)
+#define VK_INFO(...)    udon::Logger::_vkLogger->info(__VA_ARGS__)
+#define VK_WARN(...)    udon::Logger::_vkLogger->warn(__VA_ARGS__)
+#define VK_ERROR(...)   udon::Logger::_vkLogger->error(__VA_ARGS__)
+#define VK_FATAL(...)   udon::Logger::_vkLogger->critical(__VA_ARGS__)
 
-#define UDON_VERBOSE(...) ::udon::Logger::_udonLogger->trace(__VA_ARGS__)
-#define UDON_INFO(...)    ::udon::Logger::_udonLogger->info(__VA_ARGS__)
-#define UDON_WARN(...)    ::udon::Logger::_udonLogger->warn(__VA_ARGS__)
-#define UDON_ERROR(...)   ::udon::Logger::_udonLogger->error(__VA_ARGS__)
-#define UDON_FATAL(...)   ::udon::Logger::_udonLogger->critical(__VA_ARGS__)
+#define UDON_VERBOSE(...) udon::Logger::_udonLogger->trace(__VA_ARGS__)
+#define UDON_INFO(...)    udon::Logger::_udonLogger->info(__VA_ARGS__)
+#define UDON_WARN(...)    udon::Logger::_udonLogger->warn(__VA_ARGS__)
+#define UDON_ERROR(...)   udon::Logger::_udonLogger->error(__VA_ARGS__)
+#define UDON_FATAL(...)   udon::Logger::_udonLogger->critical(__VA_ARGS__)
 
-#define CLIENT_VERBOSE(...) ::udon::Logger::_clientLogger->trace(__VA_ARGS__)
-#define CLIENT_INFO(...)    ::udon::Logger::_clientLogger->info(__VA_ARGS__)
-#define CLIENT_WARN(...)    ::udon::Logger::_clientLogger->warn(__VA_ARGS__)
-#define CLIENT_ERROR(...)   ::udon::Logger::_clientLogger->error(__VA_ARGS__)
-#define CLIENT_FATAL(...)   ::udon::Logger::_clientLogger->critical(__VA_ARGS__)
+#define CLIENT_VERBOSE(...) udon::Logger::_clientLogger->trace(__VA_ARGS__)
+#define CLIENT_INFO(...)    udon::Logger::_clientLogger->info(__VA_ARGS__)
+#define CLIENT_WARN(...)    udon::Logger::_clientLogger->warn(__VA_ARGS__)
+#define CLIENT_ERROR(...)   udon::Logger::_clientLogger->error(__VA_ARGS__)
+#define CLIENT_FATAL(...)   udon::Logger::_clientLogger->critical(__VA_ARGS__)
 
 #endif //UDON_LOGGER_HPP

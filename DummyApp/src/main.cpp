@@ -8,31 +8,27 @@
 
 #include <Udon/Core/Logger.hpp>
 
+#include "Udon/Core/Udon.hpp"
+
+class Game : public udon::Udon {
+public:
+  Game() = default;
+  ~Game() override = default;
+
+protected:
+
+private:
+};
+
 int32 main() {
   try {
     udon::Logger::Initialize("Dummy App");
 
-    SDL::Context _context;
+    const auto game = std::make_unique<Game>();
+    game->Run();
 
-    SDL::Window _window;
-
-    if (!_context.CreateWindow(&_window, "Test", 1280, 720, SDL_WINDOW_VULKAN)) {
-      return -1;
-    }
-
-    SDL_Event _event;
-    bool _running = true;
-    while (_running) {
-      while (SDL_PollEvent(&_event)) {
-        if (_event.type == SDL_EVENT_QUIT) {
-          _running = false;
-        }
-      }
-
-      SDL_Delay(1);
-    }
   } catch (const std::exception& ex) {
-    std::cerr<<ex.what()<<"\n";
+    CLIENT_FATAL(ex.what());
     return -1;
   }
 

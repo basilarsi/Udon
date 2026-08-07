@@ -9,7 +9,9 @@ add_library(Udon SHARED src/Pch.cpp
     src/Math/Point2D.cpp
     src/SDL.cpp
     src/Core/Window.cpp
-    src/Core/Logger.cpp)
+    src/Core/Logger.cpp
+    src/Graphics/GraphicsDevice.cpp
+    src/Core/Udon.cpp)
 
 add_subdirectory(vendor/sdl)
 add_subdirectory(vendor/spdlog)

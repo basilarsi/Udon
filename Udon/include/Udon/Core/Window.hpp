@@ -6,11 +6,13 @@
 #define UDON_WINDOW_HPP
 
 #include <optional>
+#include <vulkan/vulkan.h>
 
 #include "Udon/SDL.hpp"
 
 namespace udon {
   struct WindowCreateInfo final {
+    std::string Title;
   };
 
   class UDON_API Window final {
@@ -26,16 +28,24 @@ namespace udon {
      * @brief Attempts to create a window. You shouldn't call this unless you're using a custom app loop.
      * @return True on success, false otherwise.
      */
-    [[nodiscard]] static bool Construct();
+    [[nodiscard]] static bool Construct(const SDL::Context& context);
+
+    /**
+     * @brief Checks whether the window is initialized.
+     */
+    [[nodiscard]] static bool Initialized();
 
     /**
      * @brief Destroys the window, you shouldn't call this unless you're using a custom app loop.
      */
     static void Teardown();
 
+    [[nodiscard]] static VkSurfaceKHR CreateSurface(VkInstance instance);
+
   private:
     static inline std::optional<WindowCreateInfo> _createInfo             = std::nullopt;
     static inline bool                            _failedConfigValidation = false;
+    static inline bool                            _initialized            = false;
     static inline SDL::Window                     _window;
   };
 }

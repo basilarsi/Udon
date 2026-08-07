@@ -62,6 +62,10 @@ namespace SDL {
     // ReSharper disable once CppNonExplicitConversionOperator
     operator SDL_Window*() const;
 
+    /* Methods */
+
+    void Destroy();
+
     friend class Context;
 
   private:
